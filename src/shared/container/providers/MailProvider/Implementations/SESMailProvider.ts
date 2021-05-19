@@ -17,8 +17,8 @@ export default class SESMailProvider implements IMailProvider {
     this.client = nodemailer.createTransport({
       SES: new aws.SES({
         apiVersion: '2010-12-01',
-        accessKeyId: 'AKIAYC2AS4NE4MRLUQVW',
-        secretAccessKey: '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',
+        accessKeyId: `${process.env.ACESS_KEY_ID}`,
+        secretAccessKey: `${process.env.SECRET_ACCESS_KEY}`,
         region: 'us-east-1',
         //  accessKeyId:
         // accessSecretKey:
