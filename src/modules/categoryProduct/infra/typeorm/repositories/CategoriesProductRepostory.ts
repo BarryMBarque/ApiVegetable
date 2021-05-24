@@ -31,9 +31,17 @@ class CategoriesProductRepository implements ICategoriesProductRepository {
     const categoryProduct = await this.ormRepository.findOne(id);
     return categoryProduct;
   }
-
+  public async findByName(name: string): Promise<CategoryProduct | undefined> {
+    const categoryProduct = await this.ormRepository.findOne({
+      where: {
+        name: name
+      }
+    });
+    return categoryProduct;
+  }
   public async save(categoryProduct: CategoryProduct): Promise<CategoryProduct> {
     return await this.ormRepository.save(categoryProduct);
   }
 }
 export default CategoriesProductRepository;
+

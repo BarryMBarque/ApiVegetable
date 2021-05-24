@@ -15,18 +15,19 @@ const upload = multer(uploadConfig.multer);
 profileRouter.use(ensureAuthenticate);
 const profileController= new ProfileController();
 profileRouter.get('/', profileController.show);
-profileRouter.put('/',
-celebrate({
-  [Segments.BODY]:{
-    name: Joi.string().required(),
-    cpf: Joi.number().required(),
-    phoneNumber: Joi.string(),
-    email: Joi.string().email().required(),
-    old_password: Joi.string(),
-    password: Joi.string(),
-    password_confirmation: Joi.string().valid(Joi.ref('password')),
-  }
-})
+profileRouter.put('/'
+// ,
+// celebrate({
+//   [Segments.BODY]:{
+//     name: Joi.string().required(),
+//     cpf: Joi.number().required(),
+//     phoneNumber: Joi.string(),
+//     email: Joi.string().email().required(),
+//     old_password: Joi.string(),
+//     password: Joi.string(),
+//     password_confirmation: Joi.string().valid(Joi.ref('password')),
+//   }
+// })
 ,profileController.update);
 
 

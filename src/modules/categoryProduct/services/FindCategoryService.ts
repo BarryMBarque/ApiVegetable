@@ -17,14 +17,14 @@ class CreateCategoryProductService {
 
   public async execute({
     name
-  }: IRequest): Promise<CategoryProduct> {
+  }: IRequest): Promise<CategoryProduct | undefined> {
     
-    const categoryProduct = await this.categoriesproductRepository.create({
+    const categoryProduct = await this.categoriesproductRepository.findByName(
        name
-    });
-
-    //await this.cacheProvider.invalidatePrefix('providers-list');
-
+    );
+  if(!categoryProduct){
+    throw new AppError('Category not found!');
+  }
     return categoryProduct;
   }
 }

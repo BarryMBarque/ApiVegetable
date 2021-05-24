@@ -52,7 +52,7 @@ class UsersRepository implements IAdressesRepository {
     return adress;
   }
   public async findAllUserAdresses(id: string): Promise<Adress[]> {
-    console.log('=> aqui', id);
+
   
     const adress = await this.ormRepository.find({
       where:{

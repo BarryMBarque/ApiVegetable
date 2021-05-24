@@ -11,7 +11,7 @@ import FindAllProductsBycategory from '../controllers/FindAllProductsByCategorie
 
 
 const GetProductsByCategoryRouter = Router();
-const upload = multer(uploadConfig.multer);
+
 
 
 

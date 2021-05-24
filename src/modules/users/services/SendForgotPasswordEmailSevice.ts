@@ -40,7 +40,7 @@ public async  execute({email}: IRequest):Promise<void>{
     name: user.name,
     email: user.email,
     },
-    subject: '[GoBarber] Recuperação de senha',
+    subject: '[AppVegetable] Recuperação de senha',
     templateData:{
       file: forgotPasswordTeplate,
       varaibles: {

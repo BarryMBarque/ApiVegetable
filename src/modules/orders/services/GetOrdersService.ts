@@ -23,8 +23,6 @@ class GetOrdersService {
 
   user_id
 
-
-
   }: IRequest): Promise<Order[]> {
    
     console.log('=>',user_id)

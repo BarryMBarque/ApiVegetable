@@ -23,8 +23,7 @@ class CreateUserService {
     private usersRepository: IUsersRepository,
     @inject('HashProvider')
     private hashProvider: IHashProvider,
-   // @inject ('CacheProvider')
-   // private cacheProvider: ICacheProvider,
+
     ){}
 public async execute({name, cpf, phoneNumber, email, password, avatar}: IRequest): Promise<User>{
 
@@ -39,7 +38,7 @@ public async execute({name, cpf, phoneNumber, email, password, avatar}: IRequest
     
    });
   
- // await this.cacheProvider.invalidatePrefix('providers-list');
+
 
    return user;
 

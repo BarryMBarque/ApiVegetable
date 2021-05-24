@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-//import './providers';
+import './providers';
 import '../../modules/users/provider';
 import { container } from 'tsyringe';
 import uploadConfig from '../../config/upload';

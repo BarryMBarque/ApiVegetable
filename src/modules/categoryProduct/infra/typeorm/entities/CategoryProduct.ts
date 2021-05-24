@@ -9,7 +9,7 @@ import {
 
 
 @Entity('categoryProducts')
-class Adress {
+class CategoryProduct {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -24,4 +24,4 @@ class Adress {
 
   
 }
-export default Adress;
+export default CategoryProduct ;

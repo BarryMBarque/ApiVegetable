@@ -14,7 +14,7 @@ interface IRequest {
   phoneNumber: string;
   name: string;
   email: string;
-  old_password: string;
+  oldPassword: string;
   password: string;
 }
 @injectable()
@@ -27,7 +27,7 @@ class UpdateProfileService {
     ){}
   public async execute ({  user_id,  name,cpf, phoneNumber,
     email,
-    old_password,
+    oldPassword,
     password,}: IRequest):Promise<User>{
 
  
@@ -44,11 +44,12 @@ class UpdateProfileService {
     user.cpf= cpf,
     user.phoneNumber=phoneNumber;
      user.email = email;
-     if (password && !old_password){
+     console.log(user.name);
+     if (password && !oldPassword){
       throw new AppError("You need to informe the old password to set the new password",401);
      }
-     if (password && old_password){
-       const checkOldPassword = await this.hashProvider.compareHash(old_password, user.password);
+     if (password && oldPassword){
+       const checkOldPassword = await this.hashProvider.compareHash(oldPassword, user.password);
        if(!checkOldPassword){
         throw new AppError("Old Password does not match",401);
        }
