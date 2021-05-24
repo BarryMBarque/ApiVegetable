@@ -12,11 +12,11 @@ Para fazer o uso do Api, algumas ferramentas serão necessárias:
 
 * [Node.js](https://nodejs.org/pt-br/download/package-manager/) Necessário para a compilação do código;
 * [Docker](https://www.docker.com/get-started) O docker sera necessário para a criação da imagem para o banco de dados
-*[Postgres](https://hub.docker.com/_/postgres) Precisa-se da imagem do postgres no docker
+[Postgres](https://hub.docker.com/_/postgres) Precisa-se da imagem do postgres no docker
 
 Ex: docker run  --name nome_do_conatiner -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postgres
 
-*[DBeaver](https://dbeaver.com/download/) Criar uma Base de Dados com Nome "loja_hadi" conectada na porta 5432 
+* [DBeaver](https://dbeaver.com/download/) Criar uma Base de Dados com Nome "loja_hadi" conectada na porta 5432 
 
 
 
@@ -27,7 +27,7 @@ Mostra as configurações do projeto tanto em desenvolvimento tanto em produçã
 ## Executando
 * execute o comando Yarn para baixar as dependencias necessárias
 
-* excutar yarn dev:server para rodar a API
+* execute yarn dev:server para rodar a API
 
 ## Funcionalidades
 * API para para venda de  produto online:
