@@ -1,4 +1,4 @@
-# App Vegetables&Fruits-Aplicativo de venda online de fruitas e legumes
+# API Vegetables&Fruits- API do Aplicativo de venda online de fruitas e legumes
 
 
 [Projeto](https://github.com/BarryMBarque/ApiVegetable)-produzido pelo aluno [Barry Malick Barque](https://github.com/BarryMBarque) como parte da complementação de carga horária da disciplina de Tecnologia em Desenvolvimento de Sistemas do 6º período do Curso de Ciência da Computação, da Universidade Tecnológica Federal do Paraná - UTFPR Medianeira, sob a orientação do professor [Everton Coimbra de Araújo](https://github.com/evertonfoz).
